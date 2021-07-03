@@ -1,3 +1,3 @@
 # blog-laravel-app-docker
 
-Environment of https://github.com/Naba0123/blog-laravel-app
+参考：https://qiita.com/A-Kira/items/9a03d7b230741ed7b1de
