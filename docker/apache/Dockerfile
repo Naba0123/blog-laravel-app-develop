@@ -7,6 +7,10 @@ RUN apt-get update \
   && docker-php-ext-install zip pdo_mysql mysqli \
   && docker-php-ext-enable mysqli
 
+# デフォルトは rewrite が無効になっている
+RUN cd /etc/apache2/mods-enabled \
+    && ln -s ../mods-available/rewrite.load
+
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV COMPOSER_HOME /composer
